@@ -6,7 +6,7 @@
 	<!-- About Section -->
     <section>
         <div class="container">
-            <div class="row">
+        	<div class="row">
             	<form action="message.php" method="POST">
             		<div class="col-sm-10 form-group">
             			<textarea id="message" name="message" class="form-control" value=""></textarea>
@@ -16,9 +16,30 @@
             		</div>
             	</form>
             </div>
-            <div>
+            <div class="row">
+            	<?php 
+            		include("includes/connexion.inc.php");
+
+            		//recuperation et affichage du contenue
+            		$query="SELECT * FROM messages";
+            		$result = $pdo->prepare($query);
+            		$result->execute();
+            		while($row = $result->fetch())
+            		 {
+            			$message = $row['contenue'];
+            			echo "<blockquote><p>".$row['contenue']."</p></blockquote><button method='POST' id=".$row['id']."type='submit' class='btn btn-secondary'>Secondary</button>";
+                    	echo gmdate("Y-m-d H:i:s", $row['date']);
+        				 ?>
+        				 <span>
+ 								<a href="index.php?a=modif&id=<?php=$donne['id']?>" class=" btn btn-success"> Modifier</a>
+ 							<a href="index.php?a=supp&id=<?php=$donne['id']?>" class="btn btn-danger"> Supprimer</a>
+ 						</span>
+                	 
+                <?php } ?>
+      
 
             </div>
+
         </div>
     </section> 
     <?php include("includes/bas.inc.php"); ?>
