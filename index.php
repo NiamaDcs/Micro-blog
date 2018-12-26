@@ -17,6 +17,7 @@
             	</form>
             </div>
             <div class="row">
+                <div class="col-sm-11 justify-content-center">
             	<?php 
             		include("includes/connexion.inc.php");
 
@@ -27,16 +28,18 @@
             		while($row = $result->fetch())
             		 {
             			$message = $row['contenue'];
-            			echo "<blockquote><p>".$row['contenue']."</p></blockquote><button method='POST' id=".$row['id']."type='submit' class='btn btn-secondary'>Secondary</button>";
+            			echo "<blockquote><p>".$row['contenue']."</p>";
                     	echo gmdate("Y-m-d H:i:s", $row['date']);
         				 ?>
-        				 <span>
- 								<a href="index.php?a=modif&id=<?php=$donne['id']?>" class=" btn btn-success"> Modifier</a>
- 							<a href="index.php?a=supp&id=<?php=$donne['id']?>" class="btn btn-danger"> Supprimer</a>
+        				 <span class="flex">
+ 								<a href="index.php?edit=<?php echo $row['id']; ?>"
+                                    class="btn btn-info"> Modifier</a>
+ 							<a href="message.php?supp=<?php echo $row['id']; ?>" 
+                                class="btn btn-danger">Supprimer</a>
  						</span>
                 	 
-                <?php } ?>
-      
+                <?php echo "</blockquote>"; } ?>
+      </div>
 
             </div>
 
