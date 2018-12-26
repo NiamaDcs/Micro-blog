@@ -22,12 +22,24 @@
         <div class="container">
         	<div class="row">
             	<form action="message.php" method="POST">
-            		<div class="col-sm-10 form-group">
-            			<textarea id="message" name="message" class="form-control" value=""></textarea>
-            		</div>
-            		<div>
-            			<button type="submit" name="envoyer" class="btn btn-success btn-lg">Envoyer</button>
-            		</div>
+                    <div class="col-sm-10 form-group">
+                    <?php 
+                    include("includes/connexion.inc.php");
+
+                         if(isset($_GET['edit'])){
+                        $requete="SELECT * FROM messages where id = :id";
+                        $prep = $pdo->prepare($requete);
+                        $prep->bindValue(':id', $_GET['edit']);
+                        $prep->execute();
+                        while($data = $prep->fetch()){
+                        ?>
+                         <textarea id="message" name="message" class="form-control" 
+                        value="<?php echo $data['contenue']; ?>"></textarea>
+                        <input type="hidden" name="id" value="<?php echo $data['id']; ?>">
+                       <div class="col-sm-2 form-group">
+                             <button type="submit" name="envoyer" class="btn btn-success btn-lg">Envoyer</button>
+            	       </div>  
+                    <?php  } }?>
             	</form>
             </div>
             <div class="row">
@@ -42,6 +54,7 @@
             		while($row = $result->fetch())
             		 {
             			$message = $row['contenue'];
+                        $id = $row['id'];
             			echo "<blockquote><p>".$row['contenue']."</p>";
                     	echo gmdate("Y-m-d H:i:s", $row['date']);
         				 ?>
