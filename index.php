@@ -5,6 +5,20 @@
 
 	<!-- About Section -->
     <section>
+        <?php require_once 'message.php'; ?>
+        <?php 
+
+            if (isset($_SESSION['message'])):
+
+        ?>
+        <div class="alert alert-<?=$_SESSION['msg_type']?>">
+
+            <?php 
+            echo $_SESSION['message'];
+            unset($_SESSION['message']);
+            ?>
+        </div>
+<?php endif ?>
         <div class="container">
         	<div class="row">
             	<form action="message.php" method="POST">
