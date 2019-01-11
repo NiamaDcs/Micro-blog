@@ -3,31 +3,31 @@ session_start();
 
  include("includes/connexion.inc.php");
 
-
  //requete qui permet d'inserer un message
-if(isset($_POST['message'])){
-	$message = $_POST['message'];
-	$requete = $pdo->prepare("INSERT INTO messages (contenue, date) Values(:message, NOW())");
-	$requete->bindvalue(':message', $message);
-	$requete->execute();
-
-	$_SESSION['message'] = "Succès!";
-	$_SESSION['msg_type'] = "success";
-	} 
-//modification
-	if (isset($_POST['message'])){
-		$message=$_POST['message'];
-		if($message !=""){
-			$id= $_POST['id'];
-			$requete = $pdo->prepare("UPDATE messages SET contenue = :contenue WHERE id = :id");
-			$requete->bindvalue(':contenue', $message);
+if (isset($_POST['message'])){
+		$message = $_POST['message'];
+		
+	if($message==""){
+		$requete = $pdo->prepare("INSERT INTO messages (contenue, date) Values(:message, NOW())");
+		$requete->bindvalue(':message', $message);
+		$requete->execute();
+			$_SESSION['message'] = "Succès!";
+			$_SESSION['msg_type'] = "success";
+	}else {
+		@$id = $_GET['edit'];
+		if(isset($id)){
+		$requete = $pdo->prepare("UPDATE message SET contenue = :contenue where id = :id");
+		$requete->bindvalue(':contenue', $message);
 			$requete->bindvalue(':id', $id);
 			$requete->execute();
-		}
-	
-	//header("location: index.php");
-}
 
+			$_SESSION['message'] = "Succès!";
+			$_SESSION['msg_type'] = "success";
+			}
+
+	}
+
+}
 
 // requete qui permetde supprimer un message
 if (isset($_GET['supp'])){
@@ -38,7 +38,8 @@ if (isset($_GET['supp'])){
 
 	$_SESSION['message'] = "Supprimer!";
 	$_SESSION['msg_type'] = "danger";
+	}
 
 	header("location: index.php");
-}
+
 ?>

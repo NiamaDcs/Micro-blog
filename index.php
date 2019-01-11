@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
 <body id="page-top" class="index">
-	<?php $title="CONNEXION"; include("includes/haut.inc.php"); ?>
+	<?php $title="CONNEXION"; 
+            $link ="connexion.php";
+    include("includes/haut.inc.php"); ?>
 
 	<!-- About Section -->
     <section>
@@ -20,27 +22,18 @@
         </div>
 <?php endif ?>
         <div class="container">
-        	<div class="row">
-            	<form action="message.php" method="POST">
-                    <div class="col-sm-10 form-group">
-                    <?php 
-                    include("includes/connexion.inc.php");
-
-                         if(isset($_GET['edit'])){
-                        $requete="SELECT * FROM messages where id = :id";
-                        $prep = $pdo->prepare($requete);
-                        $prep->bindValue(':id', $_GET['edit']);
-                        $prep->execute();
-                        while($data = $prep->fetch()){
-                        ?>
-                         <textarea id="message" name="message" class="form-control" 
-                        value="<?php echo $data['contenue']; ?>"></textarea>
-                        <input type="hidden" name="id" value="<?php echo $data['id']; ?>">
-                       <div class="col-sm-2 form-group">
-                             <button type="submit" name="envoyer" class="btn btn-success btn-lg">Envoyer</button>
-            	       </div>  
-                    <?php  } }?>
-            	</form>
+                <div class="row">
+                <form action="message.php" method="post">
+                    <div class="col-sm-10">
+                        <div class="form-group">
+                            <textarea id="message" name="message" class="form-control" value="" placeholder=""></textarea>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <button type="submit" class="btn btn-success btn-lg" >Envoyer</button> 
+                    </div>
+                </form>
+            </div>
             </div>
             <div class="row">
                 <div class="col-sm-11 justify-content-center">
@@ -53,25 +46,27 @@
             		$result->execute();
             		while($row = $result->fetch())
             		 {
-            			$message = $row['contenue'];
+            			$message = $row['contenu'];
                         $id = $row['id'];
-            			echo "<blockquote><p>".$row['contenue']."</p>";
+            			echo "<blockquote><p>".$row['contenu']."</p>";
                     	echo gmdate("Y-m-d H:i:s", $row['date']);
         				 ?>
         				 <span class="flex">
- 								<a href="index.php?edit=<?php echo $row['id']; ?>"
+ 								<a href="#"
                                     class="btn btn-info"> Modifier</a>
- 							<a href="message.php?supp=<?php echo $row['id']; ?>" 
+ 							<a href="#" 
                                 class="btn btn-danger">Supprimer</a>
+                                <a href="#" 
+                                class="btn btn-danger">Vote</a>
  						</span>
                 	 
                 <?php echo "</blockquote>"; } ?>
       </div>
 
             </div>
-
-        </div>
-    </section> 
+    
+    </section>
+    
     <?php include("includes/bas.inc.php"); ?>
     
 
@@ -87,5 +82,16 @@
     <!-- Theme JavaScript -->
     <script src="js/freelancer.min.js"></script>
 
+     <script type="text/javascript">
+            $.ajax({
+                url: 'vote.php'
+                method: 'POST'
+                data: {id: }
+                   }).done(function(retour){
+                    nombre de vote.html()
+            });
+            });
+    
+    </script>
 </body>
 </html>

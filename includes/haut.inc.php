@@ -44,7 +44,7 @@
                             <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                            <a href="index.php"><?=$title; ?></a>
+                            <a href="<?=$link; ?>"><?=$title; ?></a>
                     </li>
                 </ul>
             </div>
