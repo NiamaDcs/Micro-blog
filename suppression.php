@@ -3,7 +3,7 @@ session_start();
 
 include("includes/connexion.inc.php");
 
-  // requete qui permetde supprimer un message
+  // requete qui permet de supprimer un message
 if (isset($_GET['id'])){
 	$id= $_GET['id'];
 	$requete = $pdo->prepare("DELETE FROM messages WHERE id = :id");
@@ -16,4 +16,4 @@ if (isset($_GET['id'])){
 }
 header("location: index.php");
 
-?>
+?>  

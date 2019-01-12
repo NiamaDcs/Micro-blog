@@ -1,5 +1,5 @@
 <?php 
-include("includes/connexion.inc.php");
+include("connexion.inc.php");
 if(isset($_COOKIE['sid'])){
     $req= $pdo->prepare("SELECT sid FROM utilisateurs sid = :sid");
     $req->execute([
