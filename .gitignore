@@ -1,0 +1,19 @@
+###> Configuration IDE ###
+.idea/
+MicroBlog.iml
+MicroBlog.code-workspace
+###< Configuration IDE ###
+
+###> PHP ignored files ###
+vendor/
+composer.lock
+###< PHP ignored files ###
+
+###> JS/JSON ignored files ###
+node_modules/
+package-lock.json
+###< JS/JSON ignored files ###
+
+###> Other ignored files ###
+img/
+###< Other ignored files ###

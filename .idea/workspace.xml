@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93ae129b-d81c-4d00-b8a3-b620e1f7b6fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Micro-blog.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/connexion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/verif.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/verif.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/message.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modification.php" beforeDir="false" afterPath="$PROJECT_DIR$/modification.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process/connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/connexion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process/modif.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/modif.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/suppression.php" beforeDir="false" afterPath="$PROJECT_DIR$/suppression.php" afterDir="false" />
-    </list>
+    <list default="true" id="93ae129b-d81c-4d00-b8a3-b620e1f7b6fd" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +91,7 @@
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="65" />
     <option name="y" value="34" />
     <option name="width" value="1301" />
@@ -168,7 +154,7 @@
     <option name="totallyTimeSpent" value="1567000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
