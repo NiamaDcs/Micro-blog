@@ -48,7 +48,7 @@ var_dump($_COOKIE);
              
             $("#form-login").submit(function(e){
                    
-        if ($("mail").val() != ""){
+        if ($("#mail").val() === ""){
                 $("#notif").removeClass("hide");
            return true;
         }else {
