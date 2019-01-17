@@ -55,8 +55,9 @@ var_dump($_COOKIE);
             $("#notif").addClass("hide");
              return false;
            }
-           e.preventDefault();
+           
       });
+            e.preventDefault();
         });
     
     
