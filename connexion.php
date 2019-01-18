@@ -50,10 +50,10 @@ var_dump($_COOKIE);
                    
         if ($("#mail").val() === ""){
                 $("#notif").removeClass("hide");
-           return true;
+           return false;
         }else {
             $("#notif").addClass("hide");
-             return false;
+             return true;
            }
            
       });

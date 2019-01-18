@@ -30,10 +30,11 @@ include("../includes/connexion.inc.php");
                             }
 							else 
                                 $_SESSION['message'] = ["danger", "Le mot de passe associé à ce compte est incorrect."];
-                            header('Location: ../connexion.php');
+                            header("Location: ../connexion.php");
                             exit();
 						} 
-                    }
+                    }else header("Location: ../connexion.php");
+                    exit();
         }
 						
 
