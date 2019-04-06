@@ -42,4 +42,50 @@ $smarty->display("tpls/connexion.tpl");
 
 
 
+<<<<<<< HEAD
+=======
+	<!-- About Section -->
+	<section>
+		<div class="container">
+			<div class="row">
+				
+				<form id="form-login"action="process/connexion.php" method="POST" class="col-md-6 center" >
+					 <div class="alert alert-danger hide" id="notif">Erreur.....</div>
+				<div class="form-group">
+							<label for="mail">Adresse e-mail</label>
+							<input type="text" name="email" id="mail" value="" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="pwd">Mot de passe</label>
+							<input type="password" name="mdp" id="pwd" value="" class="form-control">
+						</div>
+						<div class="form-group">
+							<button type="submit" name="connexion" class="btn btn-primary">Se connecter</button>
+					 	</div>
+				</form>
+			</div>
+		</div>
+	</section>
+	<?php include("includes/bas.inc.php"); ?>
+    <script type="text/javascript">
+        
+        $(document).ready(function(){
+             
+            $("#form-login").submit(function(e){
+                   
+        if ($("#mail").val() === ""){
+                $("#notif").removeClass("hide");
+           return false;
+        }else {
+            $("#notif").addClass("hide");
+             return true;
+           }
+           
+      });
+            e.preventDefault();
+        });
+    
+    
+    </script>
+>>>>>>> master
 
