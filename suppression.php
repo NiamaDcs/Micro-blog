@@ -1,6 +1,7 @@
 <?php 
 session_start();
-
+require("vendor/autoload.php");
+$smarty = new Smarty();
 include("includes/connexion.inc.php");
 
   // requete qui permet de supprimer un message
@@ -15,5 +16,4 @@ if (isset($_GET['id'])){
 	
 }
 header("location: index.php");
-
 ?>  

@@ -1,0 +1,12 @@
+{
+    "name": "mdoucanse/microblog",
+    "authors": [
+        {
+            "name": "Maysoon",
+            "email": "maysoondoucanse@gmail.com"
+        }
+    ],
+    "require": {
+        "smarty/smarty": "^3.1"
+    }
+}
