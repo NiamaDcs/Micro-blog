@@ -62,6 +62,21 @@ if(isset($_GET['id']))
 // voir si le fichier existe
         $row['img'] = file_exists(1);
         $all_data[] = $row;
+
+
+      /*  $i = 0;
+        foreach ($all_data as $data) {
+
+            $data[$i]['contenu'] = preg_replace_callback("#(http(s|):\/\/([a-zA-Z0-9.-]{3,60})(\/|)([a-zA-Z0-9-._\/]+|))#", function ($matches) {
+                return "<a href='{$matches[1]}' target='_blank'>{$matches[1]}</a>";
+            }, $data[$i]["contenu"]);
+
+            $data[$i]['contenu'] = preg_replace_callback("#@([a-zA-Z0-9-_]{2,60})#", function ($matches) {
+                return "<a href='https://twitter.com/{$matches[1]}' target='_blank'>{$matches[0]}</a>";
+            }, $data[$i]['contenu']);
+
+            $i++; 
+        }*/
 }
 
  //les variables passer en parametre pour donnees a smarty

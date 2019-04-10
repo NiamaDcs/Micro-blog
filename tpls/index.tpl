@@ -62,6 +62,7 @@
     </div>
 </section>
 
+
 {include file="tpls/bas.tpl"}
 {literal}
 <script src="../js/mainIndex.js"></script>

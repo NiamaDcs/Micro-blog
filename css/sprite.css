@@ -4,3 +4,51 @@
     width: 48px;
     height: 48px;
 }
+
+.fbk {
+    background-position: -48px -48px;
+}
+
+.fbk:hover {
+    background-position: -48px 0px;
+}
+
+.twit {
+    background-position: -144px -48px;
+}
+
+.twit:hover {
+    background-position: -144px 0px;
+}
+
+.lndln {
+    background-position: -192px -48px;
+}
+
+.lndln:hover {
+    background-position: -192px 0px;
+}
+
+.ggle {
+    background-position: -240px -48px;
+}
+
+.ggle:hover {
+    background-position: -250px 0px;
+}
+
+.yb {
+    background-position: -96px -48px;
+}
+
+.yb:hover {
+    background-position: -96px 0px;
+}
+
+.sw {
+    background-position: -0px -48px;
+}
+
+.sw:hover {
+    background-position: -0px 0px;
+}

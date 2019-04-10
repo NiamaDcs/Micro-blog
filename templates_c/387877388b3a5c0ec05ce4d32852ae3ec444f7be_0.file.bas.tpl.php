@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-03-30 14:49:00
+/* Smarty version 3.1.33, created on 2019-04-10 19:52:44
   from 'C:\xampp\htdocs\Smarty\microblogSmarty\tpls\bas.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5c9f73cc57f740_02571475',
+  'unifunc' => 'content_5cae2d6cad2f53_62213051',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '387877388b3a5c0ec05ce4d32852ae3ec444f7be' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Smarty\\microblogSmarty\\tpls\\bas.tpl',
-      1 => 1553704667,
+      1 => 1554918759,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5c9f73cc57f740_02571475 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cae2d6cad2f53_62213051 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- Footer -->
 <footer class="text-center">
     <div class="footer-above">
@@ -38,10 +38,15 @@ function content_5c9f73cc57f740_02571475 (Smarty_Internal_Template $_smarty_tpl)
                     <h3>A propos</h3>
                     <p>Micro blog est une application PHP basée sur le thème <a href="https://startbootstrap.com/template-overviews/freelancer/">Freelancer</a>.</p>
                     <div class="container">
-                        <div class="row">                    </div>
-
-                        <div class="col-lg-12">
-                            <div class="sprite"></div>
+                    <div class="col-lg-12">
+                            <div class="sprite">
+                                <a href="#" class="sprite sw"></a>
+                                <a href="#" class="sprite fbk"></a>
+                                <a  href="#" class="sprite yb" ></a>
+                                <a  href="#" class="sprite twit"></a>
+                                <a  href="#" class="sprite lndln"></a>
+                                <a href="#" class="sprite ggle"></a>
+                            </div>
                         </div>
                     </div>
                 </div>

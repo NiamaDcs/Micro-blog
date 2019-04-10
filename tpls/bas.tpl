@@ -15,10 +15,15 @@
                     <h3>A propos</h3>
                     <p>Micro blog est une application PHP basée sur le thème <a href="https://startbootstrap.com/template-overviews/freelancer/">Freelancer</a>.</p>
                     <div class="container">
-                        <div class="row">                    </div>
-
-                        <div class="col-lg-12">
-                            <div class="sprite"></div>
+                    <div class="col-lg-12">
+                            <div class="sprite">
+                                <a href="#" class="sprite sw"></a>
+                                <a href="#" class="sprite fbk"></a>
+                                <a  href="#" class="sprite yb" ></a>
+                                <a  href="#" class="sprite twit"></a>
+                                <a  href="#" class="sprite lndln"></a>
+                                <a href="#" class="sprite ggle"></a>
+                            </div>
                         </div>
                     </div>
                 </div>
